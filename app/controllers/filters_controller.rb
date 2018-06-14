@@ -6,7 +6,7 @@ class FiltersController < ApplicationController
     if @filter.save
       render json: { success: 'OK' }, status: 200
     else
-      render json: { error: 'Failed' }, status: 500
+      render json: { error: @filter.errors.messages }, status: 500
     end
 
   end
