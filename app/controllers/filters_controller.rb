@@ -14,7 +14,7 @@ class FiltersController < ApplicationController
   private
 
   def permitted_attributes
-    params.require(:filter).permit(:browser, :city, :ip_address, :latitude, :longtitude, :current_time,
+    params.require(:filter).permit(:browser, :city, :ip_address, :latitude, :longtitude, :current_time, :os,
                                     districts: [], subway: [], prices: [], types: [])
   end
 end
