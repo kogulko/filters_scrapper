@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_23_114913) do
+ActiveRecord::Schema.define(version: 2018_08_12_172834) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,13 +18,13 @@ ActiveRecord::Schema.define(version: 2018_06_23_114913) do
   create_table "filters", force: :cascade do |t|
     t.string "browser", default: ""
     t.string "city", default: ""
-    t.string "districts", array: true
+    t.string "districts", default: [""], array: true
     t.string "ip_address"
     t.float "latitude"
     t.float "longtitude"
-    t.string "subway", array: true
-    t.string "prices", array: true
-    t.string "types", array: true
+    t.string "subway", default: [""], array: true
+    t.string "prices", default: [""], array: true
+    t.string "types", default: [""], array: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.time "current_time"
